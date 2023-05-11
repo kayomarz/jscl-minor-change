@@ -202,7 +202,8 @@
         (dolist (input files)
           (!compile-file input out))
         (format out "})(jscl.internals.pv, jscl.internals);~%")
-        (format out "})( typeof require !== 'undefined'? require('./jscl'): window.jscl )~%"))))
+        ;; (format out "})( typeof require !== 'undefined'? require('./jscl'): window.jscl )~%"))))
+        (format out "})( window.jscl )~%"))))
 
 
 
